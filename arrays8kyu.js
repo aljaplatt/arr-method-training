@@ -204,3 +204,32 @@ function howMuchILoveYou(nbPetals) {
 }
 
 console.log(howMuchILoveYou(3));
+
+//* Remove First and Last Character Part Two
+
+//? You are given a string containing a sequence of character sequences separated by commas.
+
+//? Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+
+//? If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as a generic value NULL in the examples below).
+
+//? My Solution 
+
+function array(arr){
+  // let ogStr = arr.split('').shift()
+  // // let newArr = ogStr.split('').shift()
+  // console.log(ogStr)
+    
+    // split string into an array - remove comma = [ '1', '2', '3' ]
+  //   let newArr = arr.split(',')
+    
+    // slice first and last element
+  //   let newArr = arr.split(',').slice(1, -1)
+    
+    // join with space, convert to string
+    let newArr = arr.split(',').slice(1, -1).join(' ')
+    
+  //   if newArr is empty = falsey ? 
+    
+    return newArr || null
+  }
