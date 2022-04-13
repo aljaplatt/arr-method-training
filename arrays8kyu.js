@@ -369,7 +369,7 @@ const check = (a, x) => a.includes(x); // ternary unnecessary - includes returns
 
 function getAverage(marks) {
 	//TODO : calculate the downward rounded average of the marks array
-	//   return marks.reduce((total, mark,_, arr) => Math.trunc((total + mark)/ arr.length), 0) // Not working, math in wrong place 
+	//   return marks.reduce((total, mark,_, arr) => Math.trunc((total + mark)/ arr.length), 0) // Not working, math in wrong place
 
 	const avr = marks.reduce((total, mark) => total + mark, 0);
 	//   console.log(avr)
@@ -383,3 +383,19 @@ function getAverage(marks) {
 // function getAverage(marks){
 //   return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
 // }
+
+//* Sort and Star
+
+function twoSort(s) {
+	//  console.log(s.sort()[0]) // return first value after being sorted
+	return s.sort()[0].split('').join('***');
+}
+function twoSort(s) {
+	//  console.log(s.sort()[0]) // return first value after being sorted
+	return s.sort()[0].split('').join('***');
+}
+
+/**
+ * //! other solution
+ * ! const twoSort = s => [...s.sort()[0]].join('***');
+ */
