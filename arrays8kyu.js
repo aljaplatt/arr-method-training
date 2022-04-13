@@ -369,7 +369,7 @@ const check = (a, x) => a.includes(x); // ternary unnecessary - includes returns
 
 function getAverage(marks) {
 	//TODO : calculate the downward rounded average of the marks array
-	//   return marks.reduce((total, mark,_, arr) => Math.trunc((total + mark)/ arr.length), 0) // Not working
+	//   return marks.reduce((total, mark,_, arr) => Math.trunc((total + mark)/ arr.length), 0) // Not working, math in wrong place 
 
 	const avr = marks.reduce((total, mark) => total + mark, 0);
 	//   console.log(avr)
@@ -377,3 +377,9 @@ function getAverage(marks) {
 	//   console.log(round)
 	return round;
 }
+
+//? What i was trying to do 😣
+
+// function getAverage(marks){
+//   return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+// }
