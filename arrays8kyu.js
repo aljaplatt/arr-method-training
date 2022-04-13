@@ -273,3 +273,34 @@ function squareOrSquareRoot(array) {
   return processed;
 }
  */
+
+//* Array plus array
+
+function arrayPlusArray(arr1, arr2) {
+	const arr1Total = arr1.reduce((total, item) => total + item, 0);
+	console.log(arr1Total);
+
+	const arr2Total = arr2.reduce((total, item) => total + item, 0);
+	console.log(arr2Total);
+
+	return arr1Total + arr2Total;
+}
+
+//? other solutions
+
+/**
+   * function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+// }
+
+// accepts indefinite number of arrays
+function arrayPlusArray(...arrays) {
+  return [].concat(...arrays).reduce((a,b) => a+b,0)
+// }
+
+
+function arrayPlusArray(arr1, arr2) {
+  let arr = [...arr1, ...arr2];
+  return arr.reduce((a, b) => a + b); 
+}
+   */
