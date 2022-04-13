@@ -399,3 +399,10 @@ function twoSort(s) {
  * //! other solution
  * ! const twoSort = s => [...s.sort()[0]].join('***');
  */
+
+//* Enumerable Magic #1 - True for All?
+// todo - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+
+function all(arr, fun) {
+	return arr.every(fun);
+}
