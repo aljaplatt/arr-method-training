@@ -364,3 +364,16 @@ const check = (a, x) => a.includes(x); // ternary unnecessary - includes returns
     return false
   }
 */
+
+//* Get the mean of an array
+
+function getAverage(marks) {
+	//TODO : calculate the downward rounded average of the marks array
+	//   return marks.reduce((total, mark,_, arr) => Math.trunc((total + mark)/ arr.length), 0) // Not working
+
+	const avr = marks.reduce((total, mark) => total + mark, 0);
+	//   console.log(avr)
+	let round = Math.trunc(avr / marks.length);
+	//   console.log(round)
+	return round;
+}
