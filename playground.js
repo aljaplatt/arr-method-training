@@ -41,3 +41,55 @@ for (let i = 20; ; i++) {
 		break;
 	}
 }
+
+let hash = '';
+for (let i = 0; i < 7; i++) {
+	hash += '#';
+	console.log(hash);
+}
+
+//* fizz buzz
+
+// for (let i = 1; i <= 100; i++) {
+// 	i % 15 === 0
+// 		? console.log('fizzBuzz')
+// 		: i % 3 === 0
+// 		? console.log('fizz')
+// 		: i % 5 === 0
+// 		? console.log('buzz')
+// 		: console.log(i);
+// }
+
+//
+// function countBs(string) {
+// 	let count = 0;
+// 	for (let i = 0; i < string.length; i++) {
+// 		if (string[i] === 'B') {
+// 			count++;
+// 			console.log(count);
+// 		}
+// 	}
+// 	return count;
+// }
+
+// countBs('BBeeb');
+
+const movies = ['batman', 'titanic', 'solo'];
+
+const [favoriteMovie] = movies;
+
+console.log(favoriteMovie); // batman
+
+const movLength = movies.length;
+console.log(movLength);
+
+const lastMovie = movies[movies.length - 1];
+console.log(lastMovie);
+
+function skip5s(num) {
+	for (let i = 1; i <= num; i++) {
+		i % 5 === 0 ? console.log('skipped') : console.log(i);
+	}
+}
+
+skip5s(15);
