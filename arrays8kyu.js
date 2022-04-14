@@ -432,3 +432,33 @@ function multipleOfIndex(array) {
 // 	}
 // 	return arr1;
 //   }
+
+//* Remove String Spaces
+
+function noSpace(x) {
+	return x.split(' ').join('');
+}
+
+//* Sum Mixed Array
+
+//? Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. Return your answer as a number.
+
+function sumMix(x) {
+	console.log(x);
+	return x.map(num => Number(num)).reduce((total, num) => total + num, 0);
+	console.log(newArr);
+}
+
+//? other solutions
+
+/**
+ * function sumMix(x){
+  let result = 0;
+  for (let n of x) {
+    result += parseInt(n);
+  }
+  return result;
+}
+
+const sumMix = x => x.reduce((a, b) => +b + a, 0)
+ */
