@@ -407,4 +407,28 @@ function all(arr, fun) {
 	return arr.every(fun);
 }
 
+//* Multiple of index
 
+//?  Return a new array consisting of elements which are multiples of their own index (index will go into the number with no remainder = modulo)
+
+//? [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
+
+console.log(-6 % 1);
+
+function multipleOfIndex(array) {
+	return array.filter((num, i) => num % i === 0);
+}
+
+//! other solutions
+
+// const multipleOfIndex = array => [...array].filter((a, i) => a % i === 0);
+
+// function multipleOfIndex(arr) {
+// 	let arr1 = [];
+// 	for (let i = 1; i < arr.length; i++) {
+// 	  if (arr[i] % i == 0) {
+// 		arr1.push(arr[i]);
+// 	  }
+// 	}
+// 	return arr1;
+//   }

@@ -93,3 +93,9 @@ function skip5s(num) {
 }
 
 skip5s(15);
+
+console.log(1 % -6);
+console.log(2 % 32);
+console.log(5 % 25);
+
+// indexOf(num) % num === indexOf(num)
