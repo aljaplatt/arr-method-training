@@ -519,3 +519,11 @@ function first(arr, n) {
 	// return arr;
 	return n === undefined ? arr.slice(0, 1) : arr.slice(0, n);
 }
+
+//* Find numbers which are divisible by given number
+
+function divisibleBy(numbers, divisor) {
+	return numbers.filter(num => num % divisor === 0);
+}
+
+// const divisibleBy = (numbers, divisor) => numbers.filter(v => !(v % divisor));
