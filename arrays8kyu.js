@@ -548,12 +548,3 @@ const uefaEuro2016 = (teams, scores) =>
 // 		? `At match ${team1} - ${team2}, teams played draw.`
 // 		: `At match ${team1} - ${team2}, ${winner} won!`
 // }
-
-// function uefaEuro2016(teams, scores){
-// 	const winner = scores[0] > scores[1] ? teams[0] : (scores[0] === scores[1] ? null : teams[1]);
-// 	const result = `At match ${teams[0]} - ${teams[1]}`;
-// 	if( winner ) {
-// 	  return `${result}, ${winner} won!`;
-// 	}
-// 	return `${result}, teams played draw.`
-//   }
