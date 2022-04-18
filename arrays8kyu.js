@@ -527,3 +527,33 @@ function divisibleBy(numbers, divisor) {
 }
 
 // const divisibleBy = (numbers, divisor) => numbers.filter(v => !(v % divisor));
+
+//* UEFA EURO 2016
+
+const uefaEuro2016 = (teams, scores) =>
+	`At match ${teams[0]} - ${teams[1]}, ${
+		scores[0] === scores[1]
+			? `teams played draw.`
+			: `${scores[0] > scores[1] ? teams[0] : teams[1]} won!`
+	}`;
+
+//? other solution
+
+// function uefaEuro2016(teams, scores) {
+// 	const [team1, team2] = teams
+// 	const [score1, score2] = scores
+// 	const winner = score1 > score2 ? team1 : team2
+
+// 	return score1 === score2
+// 		? `At match ${team1} - ${team2}, teams played draw.`
+// 		: `At match ${team1} - ${team2}, ${winner} won!`
+// }
+
+// function uefaEuro2016(teams, scores){
+// 	const winner = scores[0] > scores[1] ? teams[0] : (scores[0] === scores[1] ? null : teams[1]);
+// 	const result = `At match ${teams[0]} - ${teams[1]}`;
+// 	if( winner ) {
+// 	  return `${result}, ${winner} won!`;
+// 	}
+// 	return `${result}, teams played draw.`
+//   }
