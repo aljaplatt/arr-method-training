@@ -548,3 +548,38 @@ const uefaEuro2016 = (teams, scores) =>
 // 		? `At match ${team1} - ${team2}, teams played draw.`
 // 		: `At match ${team1} - ${team2}, ${winner} won!`
 // }
+
+
+//*  camelize (js.info)
+
+function camelize(str) {
+	// const arr = str.split('').findIndex(item => item === '-');
+	// const arr2 = str.split('').filter(letter => letter !== '-')
+	// const arr0 = str.split('');
+	// console.log(arr0);
+	const arr = str
+		.split('-')
+		//? this alone will just return the first letter capitalised, you need to then add the rest of the word back. word.slice(1) takes from index 1 to the end of the word.
+		.map((word, index) =>
+			index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+		)
+		.join('');
+	console.log(arr);
+}
+
+camelize('background-color'); // 'backgroundColor';
+camelize('list-style-image'); // 'listStyleImage';
+camelize('-webkit-transition'); // 'WebkitTransition';
+
+/**
+ * function camelize(str) {
+  return str
+    .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
+    .map(
+      // capitalizes first letters of all array items except the first one
+      // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+      (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
+}
+ */
