@@ -596,12 +596,59 @@ camelize('-webkit-transition'); // 'WebkitTransition';
 
 //? The function should not modify the array. It should return the new array.
  */
-let arr = [5, 3, 8, 1];
+// let arr = [5, 3, 8, 1];
 
 function filterRange(arr, a, b) {
 	const res = arr.filter(num => num >= a && num <= b);
 	console.log(res);
 }
 
-filterRange(arr, 1, 4);
-console.log(arr);
+// filterRange(arr, 1, 4);
+// console.log(arr);
+
+//* Filter range "in place"
+
+/**
+ *? Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+
+//? The function should only modify the array. It should not return anything.
+ */
+
+let arr = [5, 3, 8, 1];
+
+// function filterRangeInPlace(arr, a, b) {
+// 	const sorted = arr.sort((a, b) => a - b);
+// 	console.log(sorted[sorted.length - 1]);
+// 	for (let num of sorted) {
+// 		if (sorted[sorted.length - 1] > b) {
+// 			sorted.pop(sorted[sorted.length - 1]);
+// 		}
+// 		console.log(arr);
+// 	}
+// }
+//? other solution
+
+function filterRangeInPlace(arr, a, b) {
+	for (let i = 0; i < arr.length; i++) {
+		let val = arr[i];
+		// remove if outside of the interval
+		if (val < a || val > b) {
+			arr.splice(i, 1);
+			i--;
+		}
+		console.log(val);
+		console.log(i);
+		console.log(arr);
+	}
+}
+//   let arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+//   alert( arr ); // [3, 1]
+
+//* Sort in decreasing order
+
+let arry = [5, 2, 1, -10, 8];
+
+console.log(arry.sort((a, b) => b - a));
