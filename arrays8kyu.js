@@ -549,8 +549,13 @@ const uefaEuro2016 = (teams, scores) =>
 // 		: `At match ${team1} - ${team2}, ${winner} won!`
 // }
 
-
 //*  camelize (js.info)
+
+/**
+ *? Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+
+//? That is: removes all dashes, each word after dash becomes uppercased.
+ */
 
 function camelize(str) {
 	// const arr = str.split('').findIndex(item => item === '-');
@@ -583,3 +588,20 @@ camelize('-webkit-transition'); // 'WebkitTransition';
     .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
 }
  */
+
+//* filterRange
+
+/**
+ *?  Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
+
+//? The function should not modify the array. It should return the new array.
+ */
+let arr = [5, 3, 8, 1];
+
+function filterRange(arr, a, b) {
+	const res = arr.filter(num => num >= a && num <= b);
+	console.log(res);
+}
+
+filterRange(arr, 1, 4);
+console.log(arr);
