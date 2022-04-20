@@ -652,3 +652,33 @@ filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
 let arry = [5, 2, 1, -10, 8];
 
 console.log(arry.sort((a, b) => b - a));
+
+//* Copy and sort array
+
+/**
+ *? We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+//? Create a function copySorted(arr) that returns such a copy.
+ */
+
+let ar = ['HTML', 'JavaScript', 'CSS'];
+
+function copySorted(arr) {
+	const newArr = [...arr].sort((a, b) => (a > b ? 1 : -1));
+	console.log(arr);
+}
+
+copySorted(ar);
+
+function copySorted(arr) {
+	return arr.slice().sort();
+}
+
+let arp = ['HTML', 'JavaScript', 'CSS'];
+
+let sorted = copySorted(arp);
+
+console.log(sorted);
+console.log(arp);
+
+
