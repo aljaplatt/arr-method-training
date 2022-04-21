@@ -60,3 +60,33 @@ console.table(footballerArr);
 
 footballerArr.splice(9, 1);
 console.log(footballerArr);
+
+//* Array maximum
+
+/**
+ * Write a program that creates the following array, then calculates and shows the array’s maximum value.
+ */
+
+ const valuesNew = [3, 11, 7, 2, 9, 10];
+
+ const sum = valuesNew.reduce((total, item) => total + item, 0);
+ console.log(sum);
+ 
+ //* List of words
+ 
+ /**
+  * Write a program that asks the user for a word until the user types "stop". The program then
+ shows each of these words, except "stop".
+  */
+ 
+ function gimmeAWord() {
+	 let words = [];
+ 
+	 for (let word of words) {
+		 let userWord = prompt(`asks the user for a word?`);
+		 if (userWord !== 'stop') {
+			 words.push(word);
+		 } else console.log(words);
+	 }
+ }
+ 
