@@ -28,3 +28,35 @@ console.log(musketeers);
 for (let man of musketeers) {
 	console.log(man);
 }
+
+//* Sum of values
+
+/**
+ * Write a program that creates the following array, then calculates and shows the sum of its values
+(42 in that case).
+const values = [3, 11, 7, 2, 9, 10];
+ */
+const values = [3, 11, 7, 2, 9, 10];
+
+// let total = 0;
+// for (let value of values) {
+// 	total += value;
+// 	console.log(value);
+// }
+
+const string = 'cristiano ronaldo';
+let footballerArr = [];
+// let total = 0;
+for (let letter of string) {
+	// total += value;
+	// console.log(letter);
+	footballerArr.push(letter);
+}
+
+const remade = footballerArr.join('');
+
+console.log(remade);
+console.table(footballerArr);
+
+footballerArr.splice(9, 1);
+console.log(footballerArr);
