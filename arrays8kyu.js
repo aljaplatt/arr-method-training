@@ -681,4 +681,8 @@ let sorted = copySorted(arp);
 console.log(sorted);
 console.log(arp);
 
+//* Beginner - Reduce but Grow
 
+function grow(x){
+	return x.reduce((total, num) => total * num, 1)
+	}
