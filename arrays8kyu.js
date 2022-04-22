@@ -710,3 +710,13 @@ function toCsvText(array) {
 	//   console.log(flat)
 	return array.join('\n');
 }
+
+//* Sum of differences in array
+
+function sumOfDifferences(arr) {
+	console.log(arr) // [ 1, 2, 10 ]
+	//   console.log(arr.length)
+	//   console.log()
+	// arr.length > 0 ? ((arr[0] - arr[1]) + (arr[1] - arr[2])) : 0
+	  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+	}
