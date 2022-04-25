@@ -730,3 +730,6 @@ const arr = n => {
 
 	return arr;
 };
+
+//todo - arr = n => n ? [...Array(n).keys()] : [];
+//! const arr = n => Array.from({length: n}, (_, i) => i);
