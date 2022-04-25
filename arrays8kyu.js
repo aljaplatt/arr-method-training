@@ -721,6 +721,8 @@ function sumOfDifferences(arr) {
 	return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
 }
 
+//? NAME ?? 
+
 const arr = n => {
 	console.log(n);
 	const arr = [];
@@ -733,3 +735,27 @@ const arr = n => {
 
 //todo - arr = n => n ? [...Array(n).keys()] : [];
 //! const arr = n => Array.from({length: n}, (_, i) => i);
+
+//? Find the Difference in Age between Oldest and Youngest Family Members
+
+function differenceInAges(ages){
+  	const sorted = ages.sort((a,b) => a - b)
+	const oldestMinusYoungest = sorted[sorted.length - 1] - sorted[0]
+	  
+	console.log(sorted)
+	console.log(oldestMinusYoungest)
+	
+	return [sorted[0], sorted[sorted.length - 1], oldestMinusYoungest]
+	  
+  }
+
+// ? other solutions 
+
+function differenceInAges (ages) {
+
+    let max = Math.max(...ages),
+        min = Math.min(...ages)
+        diff = max - min
+        
+    return [min, max, diff]
+}
