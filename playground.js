@@ -187,6 +187,8 @@ for (let crewMember in spaceship.crew) {
 	);
 }
 
+// codecademy adv objectPosition:
+
 const team = {
 	_players: [
 		{
@@ -239,8 +241,18 @@ const team = {
 		//  append tp players arr. - players arr accessed with get method.
 		this.players.push(player);
 	},
+	addGame(newOpponent, newTeamPoints, newOpponentPoints) {
+		let game = {
+			opponent: newOpponent,
+			teamPoints: newTeamPoints,
+			opponentPoints: newOpponentPoints,
+		};
+		this.games.push(game);
+	},
 };
 
 team.addPlayer('Bugs', 'Bunny', 76);
+team.addGame('Leeds', 12, 0);
 
 console.log(team.players);
+console.log(team.games);
