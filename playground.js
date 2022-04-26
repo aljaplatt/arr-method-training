@@ -109,8 +109,8 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7];
 let someNums = arr2.slice();
 console.log(someNums);
 
-
-let story = 'Last weekend, I took literally the most beautifull bike ride of my life. The route is called "The 9W to Nyack" and it stretches all the way from Riverside Park in Manhattan to South Nyack, New Jersey. It\'s really an adventure from beginning to end! It is a 48 mile loop and it literally took me an entire day. I stopped at Riverbank State Park to take some artsy photos. It was a short stop, though, because I had a freaking long way to go. After a quick photo op at the very popular Little Red Lighthouse I began my trek across the George Washington Bridge into New Jersey. The GW is a breathtaking 4,760 feet long! I was already very tired by the time I got to the other side. An hour later, I reached Greenbrook Nature Sanctuary, an extremely beautifull park along the coast of the Hudson. Something that was very surprising to me was that near the end of the route you literally cross back into New York! At this point, you are very close to the end.';
+let story =
+	'Last weekend, I took literally the most beautifull bike ride of my life. The route is called "The 9W to Nyack" and it stretches all the way from Riverside Park in Manhattan to South Nyack, New Jersey. It\'s really an adventure from beginning to end! It is a 48 mile loop and it literally took me an entire day. I stopped at Riverbank State Park to take some artsy photos. It was a short stop, though, because I had a freaking long way to go. After a quick photo op at the very popular Little Red Lighthouse I began my trek across the George Washington Bridge into New Jersey. The GW is a breathtaking 4,760 feet long! I was already very tired by the time I got to the other side. An hour later, I reached Greenbrook Nature Sanctuary, an extremely beautifull park along the coast of the Hudson. Something that was very surprising to me was that near the end of the route you literally cross back into New York! At this point, you are very close to the end.';
 
 let storyWords = story.split(' ');
 // console.log(storyWords.join(' ') )
@@ -119,62 +119,128 @@ let misspelledWord = 'beautifull';
 let badWord = 'freaking';
 
 let count = 0;
-storyWords.forEach( word => count++)
-console.log(count)
+storyWords.forEach(word => count++);
+console.log(count);
 
-storyWords = storyWords.filter(word => word !== unnecessaryWord)
+storyWords = storyWords.filter(word => word !== unnecessaryWord);
 
-storyWords = storyWords.map(word => word === misspelledWord ? 'beautiful' : word) 
+storyWords = storyWords.map(word =>
+	word === misspelledWord ? 'beautiful' : word
+);
 
-const badWordIndex = storyWords.findIndex(word => word === badWord)
+const badWordIndex = storyWords.findIndex(word => word === badWord);
 
-console.log(badWordIndex)
+console.log(badWordIndex);
 
-storyWords[78] = 'really'
+storyWords[78] = 'really';
 
-const lengthCheck = storyWords.every(word => word < 10)
-console.log(lengthCheck )
+const lengthCheck = storyWords.every(word => word < 10);
+console.log(lengthCheck);
 
-const longWordIndex = storyWords.findIndex(word => word.length > 10)
-console.log(longWordIndex)
+const longWordIndex = storyWords.findIndex(word => word.length > 10);
+console.log(longWordIndex);
 
-storyWords[111] = 'stunning'
+storyWords[111] = 'stunning';
 
-console.log(storyWords.join(' ') )
+console.log(storyWords.join(' '));
 
 let spaceship = {
-    crew: {
-    captain: { 
-        name: 'Lily', 
-        degree: 'Computer Engineering', 
-        cheerTeam() { console.log('You got this!') } 
-        },
-    'chief officer': { 
-        name: 'Dan', 
-        degree: 'Aerospace Engineering', 
-        agree() { console.log('I agree, captain!') } 
-        },
-    medic: { 
-        name: 'Clementine', 
-        degree: 'Physics', 
-        announce() { console.log(`Jets on!`) } },
-    translator: {
-        name: 'Shauna', 
-        degree: 'Conservation Science', 
-        powerFuel() { console.log('The tank is full!') } 
-        }
-    }
-}; 
+	crew: {
+		captain: {
+			name: 'Lily',
+			degree: 'Computer Engineering',
+			cheerTeam() {
+				console.log('You got this!');
+			},
+		},
+		'chief officer': {
+			name: 'Dan',
+			degree: 'Aerospace Engineering',
+			agree() {
+				console.log('I agree, captain!');
+			},
+		},
+		medic: {
+			name: 'Clementine',
+			degree: 'Physics',
+			announce() {
+				console.log(`Jets on!`);
+			},
+		},
+		translator: {
+			name: 'Shauna',
+			degree: 'Conservation Science',
+			powerFuel() {
+				console.log('The tank is full!');
+			},
+		},
+	},
+};
 
 // Write your code below
 for (let crewMember in spaceship.crew) {
-  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+	console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
 }
 for (let crewMember in spaceship.crew) {
-  console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`);
+	console.log(
+		`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`
+	);
 }
 
+const team = {
+	_players: [
+		{
+			firstName: 'Cristiano',
+			lastName: 'Ronaldo',
+			age: 38,
+		},
+		{
+			firstName: 'Jadon',
+			lastName: 'Sancho',
+			age: 21,
+		},
+		{
+			firstName: 'David',
+			lastName: 'De Gea',
+			age: 30,
+		},
+	],
+	_games: [
+		{
+			opponent: 'Liverpool',
+			teamPoints: 6,
+			opponentPoints: 0,
+		},
+		{
+			opponent: 'Man City',
+			teamPoints: 4,
+			opponentPoints: 1,
+		},
+		{
+			opponent: 'Arsenal',
+			teamPoints: 8,
+			opponentPoints: 2,
+		},
+	],
 
+	get players() {
+		return this._players;
+	},
+	get games() {
+		return this._games;
+	},
 
+	addPlayer(newFirstName, newLastName, newAge) {
+		let player = {
+			firstName: newFirstName,
+			lastName: newLastName,
+			age: newAge,
+		};
+		//  append tp players arr. - players arr accessed with get method.
+		this.players.push(player);
+	},
+};
 
+team.addPlayer('Bugs', 'Bunny', 76);
 
+console.log(team.players);
