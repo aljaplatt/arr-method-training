@@ -723,15 +723,15 @@ function sumOfDifferences(arr) {
 
 //? NAME ??
 
-const arr = n => {
-	console.log(n);
-	const arr = [];
-	for (let i = 0; i < n; i++) {
-		arr.push(i);
-	}
+// const arr = n => {
+// 	console.log(n);
+// 	const arr = [];
+// 	for (let i = 0; i < n; i++) {
+// 		arr.push(i);
+// 	}
 
-	return arr;
-};
+// 	return arr;
+// };
 
 //todo - arr = n => n ? [...Array(n).keys()] : [];
 //! const arr = n => Array.from({length: n}, (_, i) => i);
@@ -760,6 +760,19 @@ function differenceInAges(ages) {
 
 //? No Loops 2 - You only need one
 
-function check(a, b) {
-	return a.includes(b);
+// function check(a, b) {
+// 	return a.includes(b);
+// }
+
+function monkeyCount(n) {
+	// your code here
+	let parr = [];
+
+	for (let i = 1; i <= n; i++) {
+		parr.push(i);
+	}
+
+	return parr;
 }
+
+console.log(monkeyCount(5));
