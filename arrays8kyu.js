@@ -721,7 +721,7 @@ function sumOfDifferences(arr) {
 	return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
 }
 
-//? NAME ?? 
+//? NAME ??
 
 const arr = n => {
 	console.log(n);
@@ -738,24 +738,28 @@ const arr = n => {
 
 //? Find the Difference in Age between Oldest and Youngest Family Members
 
-function differenceInAges(ages){
-  	const sorted = ages.sort((a,b) => a - b)
-	const oldestMinusYoungest = sorted[sorted.length - 1] - sorted[0]
-	  
-	console.log(sorted)
-	console.log(oldestMinusYoungest)
-	
-	return [sorted[0], sorted[sorted.length - 1], oldestMinusYoungest]
-	  
-  }
+function differenceInAges(ages) {
+	const sorted = ages.sort((a, b) => a - b);
+	const oldestMinusYoungest = sorted[sorted.length - 1] - sorted[0];
 
-// ? other solutions 
+	console.log(sorted);
+	console.log(oldestMinusYoungest);
 
-function differenceInAges (ages) {
+	return [sorted[0], sorted[sorted.length - 1], oldestMinusYoungest];
+}
 
-    let max = Math.max(...ages),
-        min = Math.min(...ages)
-        diff = max - min
-        
-    return [min, max, diff]
+// ? other solutions
+
+function differenceInAges(ages) {
+	let max = Math.max(...ages),
+		min = Math.min(...ages);
+	diff = max - min;
+
+	return [min, max, diff];
+}
+
+//? No Loops 2 - You only need one
+
+function check(a, b) {
+	return a.includes(b);
 }
