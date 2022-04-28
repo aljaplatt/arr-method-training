@@ -803,4 +803,28 @@ function sockMerchant(n, ar) {
 
 sockMerchant(7, sockArr);
 
-//* harrckerrank - readLine
+console.log('---------COUNTING VALLEYS---------------');
+//* hackerrank - countingValleys
+
+const num = 8;
+const string = 'UDDDUDUU';
+function countingValleys(steps, path) {
+	// Write your code here
+	let altitude = 0;
+	let valleys = 0;
+
+	for (let i = 0; i < path.length; i++) {
+		if (path[i] === 'U') {
+			if (altitude === -1) {
+				valleys++;
+			}
+			altitude++;
+		}
+		if (path[i] === 'D') {
+			altitude--;
+		}
+	}
+	console.log(valleys);
+}
+
+countingValleys(8, string);
