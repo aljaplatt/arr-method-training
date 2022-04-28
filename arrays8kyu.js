@@ -782,18 +782,19 @@ console.log(monkeyCount(5));
 const sockArr = [1, 2, 1, 2, 1, 3, 2];
 
 function sockMerchant(n, ar) {
-	//Need to initiate a count variable to count pairs and return the value
+	// count variable to store pairs and return 
 	let count = 0;
-	//sort the given array
+	//sort the array
 	ar = ar.sort();
-	//loop through the sorted array
+	console.log(ar)
+	//loop through sorted array
 	for (let i = 0; i < n - 1; i++) {
-		//if the current item equals to the next item
-		if (ar[i] === ar[i + 1]) {
-			//then that's a pair, increment count
+		//if the curr item equals to the next item
+		if (ar[i] === ar[i++]) {
+			// increment count
 			count++;
-			// increment i to skip the next item
-			i += 1;
+			// increment i to skip the next item 
+			i++;
 		}
 	}
 	//return the count value
