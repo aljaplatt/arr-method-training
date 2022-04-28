@@ -776,3 +776,28 @@ function monkeyCount(n) {
 }
 
 console.log(monkeyCount(5));
+
+//?  HackerRank
+//* matching socks
+const sockArr = [1, 2, 1, 2, 1, 3, 2];
+
+function sockMerchant(n, ar) {
+	//Need to initiate a count variable to count pairs and return the value
+	let count = 0;
+	//sort the given array
+	ar = ar.sort();
+	//loop through the sorted array
+	for (let i = 0; i < n - 1; i++) {
+		//if the current item equals to the next item
+		if (ar[i] === ar[i + 1]) {
+			//then that's a pair, increment count
+			count++;
+			// increment i to skip the next item
+			i += 1;
+		}
+	}
+	//return the count value
+	console.log(count);
+}
+
+sockMerchant(7, sockArr);
