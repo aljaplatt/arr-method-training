@@ -793,7 +793,7 @@ function sockMerchant(n, ar) {
 		if (sorted[i] === sorted[i++]) {
 			// increment count
 			count++;
-			// increment i to skip the next item
+			// increment i to skip next item
 			i++;
 		}
 	}
