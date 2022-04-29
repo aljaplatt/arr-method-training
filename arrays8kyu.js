@@ -882,3 +882,10 @@ function jumpingOnClouds(c) {
 	}
 	return jumps;
 }
+
+//* Add Length
+
+function addLength(str) {
+	//start-here
+	return str.split(' ').map(item => `${item} ${item.length}`);
+}
