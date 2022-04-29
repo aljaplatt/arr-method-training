@@ -828,3 +828,57 @@ function countingValleys(steps, path) {
 }
 
 countingValleys(8, string);
+
+const imageUrls = [];
+
+function validateImageSize(imageUrls, maxSize) {
+	// Write your code here
+	let maxSizeConversion = 0;
+	if (maxSize === 'none') {
+		maxSizeConversion = Number(1000000);
+	} else {
+		console.log(maxSize);
+	}
+	// convert maxSize to bytes and store in var
+	// compare array item 1 to max value
+	// return image URLs + boolean in arr
+	console.log(maxSize);
+}
+
+//? hackerrank -  jumpingOnClouds
+
+const cloudArr = [0, 0, 1, 0, 0, 1, 0];
+
+// function jumpingOnClouds(c) {
+// 	// Write your code here
+// 	let jumps = 0;
+// 	let i = 0;
+// 	while (i < c.length - 1) {
+// 		// if there is a 1, 2 spaces away, jump 1.
+// 		// OR if youre in the second to last element
+// 		// i + 2 is equal to length of the array - meaning you're at the last spot - can only jump 1
+// 		if (i + 2 === c.length || c[i + 2] === 1) {
+// 			i++;
+// 			jumps++;
+// 		} else {
+// 			i + 2;
+// 			jumps++;
+// 		}
+// 		return jumps
+// 	}
+// }
+
+function jumpingOnClouds(c) {
+	let jumps = 0;
+
+	for (let i = 0; i < c.length; ) {
+		if (c[i + 2] === c.length || c[i + 2] === 1) {
+			i++;
+			jumps++;
+		} else {
+			i + 2;
+			jumps++;
+		}
+	}
+	return jumps;
+}
