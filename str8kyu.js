@@ -27,3 +27,10 @@ function booleanToString(b) {
 	//your code here
 	return String(b);
 }
+
+//? Do I get a bonus?
+
+function bonusTime(salary, bonus) {
+	// your code here
+	return bonus ? `£${salary * 10}` : `£${salary}`;
+}
