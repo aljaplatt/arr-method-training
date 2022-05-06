@@ -20,3 +20,10 @@ function greet(name) {
 function reverseWords(str) {
 	return str.split(' ').reverse().join(' ');
 }
+
+//? Convert a Boolean to a String
+
+function booleanToString(b) {
+	//your code here
+	return String(b);
+}
