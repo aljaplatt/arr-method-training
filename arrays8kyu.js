@@ -908,3 +908,9 @@ Array.prototype.filter = function( ruleCondition ) {
 	  return arr;
 	}
 	
+//? Grasshopper - Array Mean
+
+var findAverage = function (nums) {
+  
+	return nums.reduce((total, num) => total + num, 0) / nums.length
+  } 
