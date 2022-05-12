@@ -895,28 +895,30 @@ function printArray(array) {
 	return array.join();
 }
 
-//* Implement Array.prototype.filter() 
+//* Implement Array.prototype.filter()
 
-Array.prototype.filter = function( ruleCondition ) {
+Array.prototype.filter = function (ruleCondition) {
 	// Create an empty array to store the values that satisfy the ruleCondition
-	  var arr = [];
-	  
-	  this.forEach( function( currentValue ) {
-	  // Evaluate each element and push the value when content in array meet condition
-		if( ruleCondition( currentValue ) ) arr.push( currentValue );
-	  });
-	  return arr;
-	}
-	
+	var arr = [];
+
+	this.forEach(function (currentValue) {
+		// Evaluate each element and push the value when content in array meet condition
+		if (ruleCondition(currentValue)) arr.push(currentValue);
+	});
+	return arr;
+};
+
 //? Grasshopper - Array Mean
 
 var findAverage = function (nums) {
-  
-	return nums.reduce((total, num) => total + num, 0) / nums.length
-  } 
+	return nums.reduce((total, num) => total + num, 0) / nums.length;
+};
 
 //? Take an Arrow to the knee, Functionally (num to ascii code)
 
-var ArrowFunc = function(arr) {
-	return arr.map( num => String.fromCharCode(num) ).join(''); //Complete this function
-  }
+var ArrowFunc = function (arr) {
+	return arr.map(num => String.fromCharCode(num)).join(''); //Complete this function
+};
+
+//   mdn
+console.log(String.fromCharCode(189, 43, 190, 61));
