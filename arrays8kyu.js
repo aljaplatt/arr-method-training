@@ -914,3 +914,9 @@ var findAverage = function (nums) {
   
 	return nums.reduce((total, num) => total + num, 0) / nums.length
   } 
+
+//? Take an Arrow to the knee, Functionally (num to ascii code)
+
+var ArrowFunc = function(arr) {
+	return arr.map( num => String.fromCharCode(num) ).join(''); //Complete this function
+  }
