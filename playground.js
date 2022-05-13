@@ -260,7 +260,7 @@ console.log(team.games);
 const bool = [true, false, true, true, false];
 
 function countBools(arr) {
-	return arr.filter(bool => bool === true);
+	return arr.filter(bool => bool === true).length;
 }
 
-console.log(countBools(bool).length);
+console.log(countBools(bool));
