@@ -256,3 +256,11 @@ team.addGame('Leeds', 12, 0);
 
 console.log(team.players);
 console.log(team.games);
+
+const bool = [true, false, true, true, false];
+
+function countBools(arr) {
+	return arr.filter(bool => bool === true);
+}
+
+console.log(countBools(bool).length);
