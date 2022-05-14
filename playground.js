@@ -264,3 +264,12 @@ function countBools(arr) {
 }
 
 console.log(countBools(bool));
+
+//? Arguments to Binary addition
+
+function arr2bin(arr) {
+	return arr
+		.filter(item => typeof item == 'number')
+		.reduce((total, num) => total + num, 0)
+		.toString(2);
+}
