@@ -54,3 +54,10 @@ function stringy(size) {
 	}
 	return str;
 }
+
+//? The Wide-Mouthed frog!
+
+function mouthSize(animal) {
+	// code here
+	return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
+}
