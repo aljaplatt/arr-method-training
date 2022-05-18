@@ -107,3 +107,9 @@ for (let name of arr) {
 function capitalizeWord(word) {
 	return word[0].toUpperCase() + word.substring(1);
 }
+
+/**
+ * function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+ */
