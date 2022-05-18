@@ -61,3 +61,30 @@ function mouthSize(animal) {
 	// code here
 	return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
 }
+
+const str = 'Stew this iS a string';
+
+const countSs = string => {
+	let count = 0;
+	for (let i = 0; i < string.length; i++) {
+		if (string[i].toLowerCase() === 's') {
+			count++;
+		}
+	}
+	console.log(count);
+};
+
+countSs(str);
+
+let john = { name: 'John', surname: 'Smith', id: 1 };
+let pete = { name: 'Pete', surname: 'Hunt', id: 2 };
+let mary = { name: 'Mary', surname: 'Key', id: 3 };
+
+let users = [john, pete, mary];
+
+let usersMapped = users.map(user => ({
+	fullName: `${user.name} ${user.surname}`,
+	id: user.id,
+}));
+
+console.log(users, usersMapped);
