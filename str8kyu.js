@@ -102,5 +102,8 @@ for (let name of arr) {
 // A message to Bilbo (and other names)
 
 //? Capitalization and Mutability
+// capitalise first letter and re-join the rest of the word
 
-
+function capitalizeWord(word) {
+	return word[0].toUpperCase() + word.substring(1);
+}
