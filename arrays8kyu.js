@@ -922,3 +922,8 @@ var ArrowFunc = function (arr) {
 
 //   mdn
 console.log(String.fromCharCode(189, 43, 190, 61));
+
+const arrNums = [1, '2', 3, 4, 5, 6, 7];
+
+const num3 = arrNums.find((item, index, arr) => index === arr.length - 1);
+console.log(num3); // return value of last item

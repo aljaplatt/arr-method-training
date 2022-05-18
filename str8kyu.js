@@ -88,3 +88,5 @@ let usersMapped = users.map(user => ({
 }));
 
 console.log(users, usersMapped);
+
+console.log('Teaching the world how to code'.length); // 30
