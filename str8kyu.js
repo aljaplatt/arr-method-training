@@ -90,3 +90,13 @@ let usersMapped = users.map(user => ({
 console.log(users, usersMapped);
 
 console.log('Teaching the world how to code'.length); // 30
+
+//? split string into arr, loop through each item
+let names = 'Bilbo, Gandalf, Nazgul';
+
+let arr = names.split(', ');
+
+for (let name of arr) {
+	console.log(`A message to ${name}.`);
+}
+// A message to Bilbo (and other names)
