@@ -118,3 +118,9 @@ function capitalizeWord(word) {
 function formatMoney(amount) {
 	return '$' + amount.toFixed(2);
 }
+
+//? String Templates - Bug Fixing #5
+
+function buildString(...template) {
+	return `I like ${template.join(', ')}!`;
+}
