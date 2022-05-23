@@ -124,3 +124,9 @@ function formatMoney(amount) {
 function buildString(...template) {
 	return `I like ${template.join(', ')}!`;
 }
+
+//? String cleaning 
+
+function stringClean(s){
+	return s.split('').filter((n) => n != parseInt(n)).join('');
+  }
