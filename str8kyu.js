@@ -166,3 +166,29 @@ function isPalindrome(line) {
 
 	return store === check;
 }
+
+//? ALWAYS HAVE PROBLEMS WITH THIS SYNTAX !!!
+//! incorrect
+// var repeatIt = function(str, n) {
+// 	  let stringVar = str
+
+// 	  if (typeof stringVar === String) {
+// 		for(let i=0; i < n; i++) {
+// 		  stringVar + str
+// 		}
+// 		return stringVar
+// 	  }
+// 	  }
+
+//* Correct
+var repeatIt = function (str, n) {
+	let stringVar = '';
+
+	if (typeof str !== 'string') {
+		return 'Not a string';
+	}
+	for (let i = 0; i < n; i++) {
+		stringVar += str;
+	}
+	return stringVar;
+};
