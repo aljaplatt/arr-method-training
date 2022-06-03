@@ -156,3 +156,13 @@ function getDrinkByProfession(param) {
 			return 'Beer';
 	}
 }
+
+//? Palindrome strings
+
+function isPalindrome(line) {
+	const store = String(line);
+
+	const check = store.split('').reverse().join('');
+
+	return store === check;
+}
